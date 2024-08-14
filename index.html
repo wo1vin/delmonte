@@ -4,8 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Del Monte | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" rel="stylesheet" href="style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link rel="stylesheet" href="styles.css"></noscript>
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet" as="style">
+    <link rel="preload" fetchpriority="high" as="image" href="./assets/nathan-anderson-large.webp" type="image/webp">
 </head>
 <body> 
     <header> 
@@ -13,9 +15,9 @@
             <a href="./index.html" class="nav-logo">Del Monte</a>
             <ul class="nav-menu">
                 <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                <hr>
+                <!-- <hr> -->
                 <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                <hr>
+                <!-- <hr> -->
                 <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
             </ul>
             <!-- hamburger menu -->
@@ -37,7 +39,7 @@
         <h2>Projects</h2>
         <div class="projectWrap"><div class="project">
             <div class="img-container"><a href="https://wo1vin.github.io/BethelArtStudio/" target="_blank">
-                <img src="./assets/bethelart.png" alt="view of project home screen"></a>
+                <img src="./assets/bethelart.webp" alt="view of project home screen"></a>
             </div>
             <h3><a href="https://wo1vin.github.io/BethelArtStudio/" target="_blank">BETHEL ART STUDIO</a></h3>
             <p>Mobile paint party studio run by local business women</p>
@@ -46,7 +48,7 @@
         <div class="project">
             <div class="img-container">
                 <a href="https://wo1vin.github.io/petpair/" target="_blank">
-                <img src="./assets/petpair.png" alt="view of project home screen"></a>
+                <img src="./assets/petpair.webp" alt="view of project home screen"></a>
             </div>
             <h3><a href="https://wo1vin.github.io/petpair/" target="_blank">PET PAIR</a></h3>
             <p>API interface to find adoptable pets</p>
@@ -57,7 +59,7 @@
             <div class="img-container">
                 <p class="wip button">WORK IN PROGRESS</p>
                 <a href="https://theartlounge.onrender.com/" target="_blank">
-                <img src="./assets/theartlounge.png" alt="view of project home screen"></a>
+                <img src="./assets/theartlounge.webp" alt="view of project home screen"></a>
             </div>
             
             <h3><a href="https://theartlounge.onrender.com/" target="_blank">THE ART LOUNGE</a></h3>
@@ -66,7 +68,7 @@
         </div>
         <div class="project">
             <div class="img-container"><a href="https://claritycounselingllc.netlify.app/" target="_blank">
-                <img src="./assets/claritycounseling.png" alt="view of project home screen"></a>
+                <img src="./assets/claritycounseling.webp" alt="view of project home screen"></a>
             </div>
             <h3><a href="https://claritycounselingllc.netlify.app/" target="_blank">CLARITY COUNSELING</a></h3>
             <p>Professional counseling business</p>
@@ -154,6 +156,6 @@
         <span id="credits"></span>
     </footer>
     
-    <script type="text/javascript" src="./main.js"></script>
+    <script type="text/javascript" src="./main.js" defer></script>
 </body>
 </html>
