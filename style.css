@@ -1,0 +1,282 @@
+/* color variables */
+:root{
+    --dark-green: #000f19;
+    --grey: #b8b8b868;
+    --yellow: #6eb700;
+    --purple:#19000F;
+    --white: #fff;
+    --black: #000;
+}
+body {
+    font-family: 'Noto Sans', sans-serif;
+    font-weight: 300;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color:var(--dark-green);
+    color: var(--white);
+    text-align: center;
+    letter-spacing: .1em;
+}
+header{
+    position: sticky;
+    z-index: 2;
+    top: 0px;
+    background-color: var(--dark-green);
+}
+/* hamburger menu */
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-bottom:  3px dotted var(--yellow);
+}
+.hamburger{
+    display: none;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: var(--white);
+}
+.nav-menu{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+/* .nav-item{
+    margin-left: 2.5rem;
+} */
+.nav-link{
+    font-family:  "Cormorant Garamond", serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--white);
+}
+.nav-link:hover{
+    color: var(--yellow);
+    text-transform: uppercase;
+}
+.nav-logo {
+    font-family:  "Cormorant Garamond", serif;
+    font-size: 2.1rem;
+    font-weight: 500;
+    text-decoration: none;
+}
+.nav-logo:hover{
+    text-decoration: underline;
+    color: var(--yellow);
+}
+
+h1,h2{
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 100;
+    margin: 0;
+}
+h1>span{
+    color: var(--yellow);
+    font-weight: 900;
+    text-transform: uppercase;
+}
+button,.button{
+    margin: .5em;
+    padding: .75em 1em;
+    border-radius: 1.75em;
+    background-color: var(--purple);
+    color: var(--white);
+    border: 1px solid var(--white);
+    letter-spacing: .1em;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--white);
+}
+h2{
+    font-size: 3em;
+    margin: 0 0 .5em 0;
+    line-height: 1;
+}
+h3,h4,a{
+    font-weight: 100;
+    color: var(--white);
+}
+h3,h4,p{
+    margin: 0;
+}
+section {
+    padding: 40px;
+    border-radius: 5px;
+    text-align: center;
+}
+.project button{
+    background-color: var(--purple);
+}
+.project {
+    margin: 20px;
+}
+.img-container{
+    width: 100%;
+}
+img{
+    width: 100%;
+}
+p.wip{
+    background-color: var(--yellow);
+    color: var(--black);
+    border: 2px solid var(--black) ;
+    font-weight: 700;
+    font-size: .7rem;
+    width: max-content;
+    margin: .5em auto;
+    padding: .4em 1em;
+    position: absolute;
+}
+#about{
+    padding: 80px 40px;
+    background-image: 
+        linear-gradient(180deg, var(--dark-green) 0%, rgba(255,255,255,0) 10%, rgba(255,255,255,0) 90%, var(--dark-green) 100%),
+        url(./assets/olena-bohovyk.jpg);
+    background-blend-mode: normal;
+}
+#about p{
+    text-align: justify;
+    margin-bottom: 1em;
+    /* width: 80%; */
+    margin: 30px 0;
+}
+hr{
+    width: 30%;
+}
+#experience p{
+    color: var(--yellow);
+    font-weight: 400;
+}
+#experience img{
+    color: var(--white);
+}
+#experience hr{
+    width: 10%;
+}
+.exp{
+    margin: 1.25em 0;
+}
+#contact ul{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+button a{
+    text-decoration: none;
+}
+.btnWrap{
+    display: flex;
+    justify-content: center;
+}
+button a:hover, a:hover{
+    color: var(--yellow);
+    transition: all 1s;
+}
+button:hover{
+    border: 3px dotted var(--yellow);
+    background-color: #000f19;
+    color: var(--yellow);
+    text-transform: uppercase;
+    transition: all 1s;
+}
+footer {
+    text-align: center;
+    padding: 20px 0;
+}
+
+
+
+
+/* MEDIA QUERIES */
+@media only screen and (min-width: 568px) {
+    .projectWrap{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        /* align-items: baseline; */
+    }
+    .project{
+        width: 40%;
+    }
+    #about{
+        padding: 80px;
+      
+        background-image: 
+            linear-gradient(180deg, var(--dark-green) 0%, rgba(0, 18, 35, 0.497)  10%, rgba(0, 0, 0, 0.53) 90%, var(--dark-green) 100%),
+            url(./assets/nathan-anderson.jpg);
+        background-blend-mode: normal;
+    }
+}
+@media only screen and (max-width: 768px) {
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 5rem;
+        flex-direction: column;
+        background-color:var(--purple);
+        opacity: .9;
+        width: 100%;
+        border-radius: 10px;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow:
+            0 10px 27px rgba(0, 0, 0, 0.05);
+    }
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-link, .nav-item {
+        padding: 2.5rem;
+    }
+
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+    .hamburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}
