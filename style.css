@@ -221,7 +221,7 @@ footer {
 
 
 /* MEDIA QUERIES */
-@media only screen and (min-width: 568px) {
+@media (min-width: 568px) {
     .projectWrap{
         display: flex;
         flex-direction: row;
@@ -239,6 +239,26 @@ footer {
             linear-gradient(180deg, var(--dark-green) 0%, rgba(0, 18, 35, 0.497)  10%, rgba(0, 0, 0, 0.53) 90%, var(--dark-green) 100%),
             url(./assets/nathan-anderson.jpg);
         background-blend-mode: normal;
+    }
+}
+@media (min-width: 768px) {
+    #about{
+        padding: 80px 120px;
+    }
+}
+@media (min-width: 1024px) {
+    #about{
+        padding: 5em 8em;
+    }
+}
+@media (min-width: 1440px) {
+    #about{
+        padding: 5em 20em;
+    }
+}
+@media (min-width: 2560px) {
+    #about{
+        padding: 5em 50em;
     }
 }
 @media only screen and (max-width: 768px) {
