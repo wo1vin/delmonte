@@ -23,9 +23,11 @@ if(window.screen.width > 568 ||
     window.innerWidth > 568){
     credits.setAttribute('href', 'https://unsplash.com/@nathananderson');
     credits.innerText = "Photograph by Nathan Anderson";
+    console.log(credits);
 } else {
     credits.setAttribute('href', 'https://unsplash.com/@olenkasergienko');
     credits.innerText = "Photograph by Olena Bohovyk";
+    console.log(credits);
 }
 
 
