@@ -1,7 +1,10 @@
-# Del Monte
-![cover image of Del Monte portfolio site](./assets/DelMonte-meta.webp)
+![Denisse "Scar" Del Monte, Software Engineer](./assets/DelMonte-meta.webp)
 ## Description
-Original, professional software engineering portfolio.
+Professional portfolio featuring software engineering projects. 
+
+Skills: Fullstack, Node, JavaScript, Python, Java, and more. 
+
+Let's collab!
 
 ### Lighthouse score
 ![metrics of lighthouse score](./assets/lighthouse.webp
