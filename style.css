@@ -136,6 +136,9 @@ section {
     border-radius: 5px;
     text-align: center;
 }
+#intro{
+    height: 115px;
+}
 .project button{
     background-color: var(--purple);
 }
@@ -247,6 +250,9 @@ footer {
     }
 }
 @media (min-width: 768px) {
+    #intro{
+        height: 40px;
+    }
     #about{
         padding: 80px 120px;
     }
@@ -260,18 +266,27 @@ footer {
     #about{
         padding: 5em 20em;
     }
+    .wip{
+        left: 10%;
+    }
 }
 @media (min-width: 1550px) {
     #about{
         padding: 5em 25em;
     }
 }
-@media (min-width: 1727px) {
+@media (min-width: 1700px) {
     #about{
         padding: 5em 30em;
     }
+    .wip{
+        left: 12%;
+    }
 }
 @media (min-width: 1900px) {
+    .wip{
+        left: 16%;
+    }
     #about>p{
         width: 800px;
         margin: 3em auto;
