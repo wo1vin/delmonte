@@ -1,8 +1,8 @@
 /* color variables */
 :root{
-    --dark-green: #000f19;
+    --midnight: #000f19;
     --grey: #b8b8b868;
-    --yellow: #6eb700;
+    --green: #6eb700;
     --purple:#19000F;
     --white: #fff;
     --black: #000;
@@ -13,7 +13,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    background-color:var(--dark-green);
+    background-color:var(--midnight);
     color: var(--white);
     text-align: center;
     letter-spacing: .1em;
@@ -22,7 +22,7 @@ header{
     position: sticky;
     z-index: 2;
     top: 0px;
-    background-color: var(--dark-green);
+    background-color: var(--midnight);
 }
 /* hamburger menu */
 .navbar{
@@ -30,7 +30,7 @@ header{
     justify-content: space-between;
     align-items: center;
     padding: 1rem 1.5rem;
-    border-bottom:  3px dotted var(--yellow);
+    border-bottom:  3px dotted var(--green);
 }
 .hamburger{
     display: none;
@@ -72,7 +72,7 @@ header{
     color: var(--white);
 }
 .nav-link:hover{
-    color: var(--yellow);
+    color: var(--green);
     text-transform: uppercase;
 }
 .nav-logo {
@@ -83,7 +83,7 @@ header{
 }
 .nav-logo:hover{
     text-decoration: underline;
-    color: var(--yellow);
+    color: var(--green);
 }
 
 h1,h2{
@@ -92,7 +92,7 @@ h1,h2{
     margin: 0;
 }
 h1>span{
-    color: var(--yellow);
+    color: var(--green);
     font-weight: 900;
     text-transform: uppercase;
 }
@@ -154,7 +154,7 @@ img{
     max-width: 100%;
 }
 p.wip{
-    background-color: var(--yellow);
+    background-color: var(--green);
     color: var(--black);
     border: 2px solid var(--black) ;
     font-weight: 700;
@@ -167,7 +167,7 @@ p.wip{
 #about{
     padding: 80px 40px;
     background-image: 
-        linear-gradient(180deg, var(--dark-green) 0%, rgba(255,255,255,0) 10%, rgba(255,255,255,0) 90%, var(--dark-green) 100%),
+        linear-gradient(180deg, var(--midnight) 0%, rgba(255,255,255,0) 10%, rgba(255,255,255,0) 90%, var(--midnight) 100%),
         url(./assets/olena-bohovyk.webp);
     background-blend-mode: normal;
 }
@@ -184,7 +184,7 @@ hr{
     width: 30%;
 }
 #experience p{
-    color: var(--yellow);
+    color: var(--green);
     font-weight: 400;
 }
 #experience img{
@@ -210,13 +210,13 @@ button a{
     justify-content: center;
 }
 button a:hover, a:hover{
-    color: var(--yellow);
+    color: var(--green);
     transition: all 1s;
 }
 button:hover{
-    border: 3px dotted var(--yellow);
-    background-color: #000f19;
-    color: var(--yellow);
+    border: 3px dotted var(--green);
+    background-color: var(--midnight);
+    color: var(--green);
     text-transform: uppercase;
     transition: all 1s;
 }
@@ -244,7 +244,7 @@ footer {
         padding: 80px;
       
         background-image: 
-            linear-gradient(180deg, var(--dark-green) 0%, rgba(0, 18, 35, 0.497)  10%, rgba(0, 0, 0, 0.53) 90%, var(--dark-green) 100%),
+            linear-gradient(180deg, var(--midnight) 0%, rgba(0, 18, 35, 0.497)  10%, rgba(0, 0, 0, 0.53) 90%, var(--midnight) 100%),
             url(./assets/nathan-anderson.webp);
         background-blend-mode: normal;
     }
@@ -293,7 +293,7 @@ footer {
     }
     #about{
         background-image: 
-            linear-gradient(180deg, var(--dark-green) 0%, rgba(0, 18, 35, 0.497)  10%, rgba(0, 0, 0, 0.53) 90%, var(--dark-green) 100%),
+            linear-gradient(180deg, var(--midnight) 0%, rgba(0, 18, 35, 0.497)  10%, rgba(0, 0, 0, 0.53) 90%, var(--midnight) 100%),
             url(./assets/nathan-anderson-large.webp);
     }
 }
