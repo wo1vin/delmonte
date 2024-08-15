@@ -2,8 +2,9 @@
 :root{
     --midnight: #000f19;
     --grey: #b8b8b868;
-    --green: #6eb700;
-    --purple:#19000F;
+    --green: #6eb800;
+    --purple: #45002a;
+    /* --purple:#19000F; */
     --white: #fff;
     --black: #000;
 }
