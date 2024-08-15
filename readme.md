@@ -1,5 +1,5 @@
 # Del Monte
-![cover image of Del Monte portfolio site](https://github.com/wo1vin/portfolio-2/blob/main/assets/readme-img.png?raw=true)
+![cover image of Del Monte portfolio site](./assets/readme-img.webp)
 ## Description
 Original, professional software engineering portfolio.
 
