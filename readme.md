@@ -1,5 +1,5 @@
 # Del Monte
-![cover image of Del Monte portfolio site](./assets/readme-img.webp)
+![cover image of Del Monte portfolio site](./assets/DelMonte-meta.webp)
 ## Description
 Original, professional software engineering portfolio.
 
