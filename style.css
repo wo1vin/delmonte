@@ -4,7 +4,6 @@
     --grey: #b8b8b868;
     --green: #6eb800;
     --purple: #45002a;
-    /* --purple:#19000F; */
     --white: #fff;
     --black: #000;
 }
@@ -63,9 +62,6 @@ header{
     align-items: center;
     margin: 0;
 }
-/* .nav-item{
-    margin-left: 2.5rem;
-} */
 .nav-link{
     font-family:  "Cormorant Garamond", serif;
     font-size: 1.6rem;
@@ -176,7 +172,6 @@ p.wip{
 #about p{
     text-align: justify;
     margin-bottom: 1em;
-    /* width: 80%; */
     margin: 30px 0;
 }
 #photoCreds{
@@ -247,9 +242,6 @@ footer {
         justify-content: space-evenly;
         align-items: baseline;
     }
-    /* .hobbyWrap{
-        align-items: flex-end;
-    } */
     .project, .card{
         width: 40%;
     }
