@@ -1,7 +1,7 @@
 /* color variables */
 :root{
     --midnight: #000f19;
-    --grey: #b8b8b868;
+    --grey: #b8b8b8;
     --green: #6eb800;
     --purple: #45002a;
     --white: #fff;
@@ -149,7 +149,7 @@ img{
     width: 500px;
     height: auto;
     max-width: 100%;
-    border-radius: 2em;
+    border-radius: 1em;
 }
 p.wip{
     background-color: var(--green);
@@ -209,6 +209,7 @@ hr{
 }
 button a{
     text-decoration: none;
+    font-weight: 400;
 }
 .btnWrap{
     display: flex;
