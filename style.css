@@ -153,6 +153,7 @@ img{
     width: 500px;
     height: auto;
     max-width: 100%;
+    border-radius: 2em;
 }
 p.wip{
     background-color: var(--green);
