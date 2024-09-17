@@ -168,6 +168,14 @@ p.wip{
         linear-gradient(180deg, var(--midnight) 0%, rgba(255,255,255,0) 10%, rgba(255,255,255,0) 90%, var(--midnight) 100%);
     background-blend-mode: normal; */
 }
+#blog pre, #blog p, #blog h2, #blog h3{
+    text-align: left;
+}
+#blog h3{
+    font-family: "Cormorant Garamond", serif;
+    color: var(--green);
+    margin-top: 1em;
+}
 #about p{
     text-align: justify;
     margin-bottom: 1em;

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog | Del Monte</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <a href="./index.html" class="nav-logo">Del Monte</a>
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="./index.html#about" class="nav-link">About</a></li>
+                <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                <li class="nav-item"><a href="./index.html#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="blog">
+            <h1>Hello, World!</h1>
+            <article class="blog-post">
+                <h2>How to Enable WRITE Access for NTFS Drives on Mac</h2>
+                <p>(No paid software needed!)</p>
+                <p class="blog-date">June 18, 2025</p>
+                <!-- <section class="blog-image">
+                    <img src="./assets/ntfs-mac.png" alt="NTFS on Mac">
+                    <p class="image-caption">Image by <a href="https://pixabay.com/users/geralt-9301/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2026451">Gerd Altmann</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2026451">Pixabay</a></p>
+                </section> -->
+                <section>
+                    <p>Today I had to stop coding because my pc didn't have enough memory to make even a single more commit. I knew I was close, but I guess backing up my phone before changing the battery pushed my PC over the edge. Good thing I had purchased an external drive not too long ago.</p>
+                    <p>I plug it in, register it, and- oh, it has a NTFS and I'm on a Mac. To keep the long-story short, NTFS is a Windows file system that has read-only support on macOS by default, so I can't use it as a drive as-is. The typical workaround is to buy bloated 3rd party software or get an external hard drive with a file system compatible with macOS, but I thought I'd find a third option to share with you. 
+                    </p>
+                    <p>
+                        All you need is your Mac’s Terminal and an internet connection. I used iTerm, but the built-in Terminal app works just as well. You can find Terminal in your Utilities folder.
+                    </p>
+                    <h3>Step 1: Update Homebrew</h3>
+                    <p>
+                        Homebrew is a package manager for macOS that makes installing software easy. First, make sure it’s up to date by running:
+                    </p>
+                    <pre><code>brew update</code></pre>
+                    <p>
+                        If you don’t have Homebrew installed, you can add it with:
+                    </p>
+                    <pre><code>/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"</code></pre>
+                    <h3>Step 2: Install NTFS Drivers</h3>
+                    <p>
+                        Next, install the NTFS-3G driver, which enables read and write support for NTFS drives:
+                    </p>
+                    <pre><code>brew install --cask macfuse</code></pre>
+                    <pre><code>brew install gromgit/fuse/ntfs-3g-mac</code></pre>
+                    <h3>Step 3: Identify Your Drive</h3>
+                    <p>
+                        List all connected drives with:
+                    </p>
+                    <pre><code>diskutil list</code></pre>
+                    <p>
+                        Look for your NTFS drive in the output. It will look something like this:
+                    </p>
+                    <pre><code>
+                <table class="diskutil-table">
+                    <thead>
+                        <tr>
+                            <th>#:</th>
+                            <th>TYPE NAME</th>
+                            <th>SIZE</th>
+                            <th>IDENTIFIER</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0:</td>
+                            <td>GUID_partition_scheme</td>
+                            <td>*500.1 GB</td>
+                            <td>disk2</td>
+                        </tr>
+                        <tr>
+                            <td>1:</td>
+                            <td>EFI EFI</td>
+                            <td>209.7 MB</td>
+                            <td>disk2s1</td>
+                        </tr>
+                        <tr>
+                            <td>2:</td>
+                            <td>Apple_HFS MyExternalDrive</td>
+                            <td>499.9 GB</td>
+                            <td>disk2s2</td>
+                        </tr>
+                    </tbody>
+                </table>
+                </code></pre>
+                <p>Note the identifier for your NTFS partition (for example, <code>/dev/disk2s1</code>).</p>
+                <h3>Step 4: Unmount the Drive</h3>
+                <p>
+                    Before mounting with write access, unmount the drive:
+                </p>
+                <pre><code>diskutil unmountDisk /dev/disk2</code></pre>
+                    <p>
+                        Replace <code>/dev/disk2</code> with your actual drive identifier.
+                    </p>
+                    <h3>Step 5: Create a Mount Point</h3>
+                    <p>
+                        Make a directory where you’ll mount the NTFS drive:
+                    </p>
+                    <pre><code>sudo mkdir -p /Volumes/NTFS-RW</code></pre>
+                    <h3>Step 6: Mount the NTFS Drive with Write Access</h3>
+                    <p>
+                        Now, mount the drive using:
+                    </p>
+                    <pre><code>sudo ntfs-3g /dev/disk2s1 /Volumes/NTFS-RW -olocal -oallow_other</code></pre>
+                    <p>
+                        Again, replace <code>/dev/disk2s1</code> with your partition’s identifier. This command gives you read and write access.
+                    </p>
+                    <p>
+                        You should now see your NTFS drive in Finder, and you’ll be able to copy files to it!
+                    </p>
+                    <h3>Conclusion</h3>
+                    <p>
+                        That’s it! You’ve enabled write access to your NTFS drive on macOS without paying for extra software. You’ll need to repeat the mount command each time you plug it in and want to write to the drive, but you could always automate that with a script. Hope this helps you as much as it helped me! 
+                    </p>
+                </section>
+            </article>
+            <!-- Add more blog posts here -->
+        </section>
+    </main>
+    <footer>
+        <span id="credits"></span>
+    </footer>
+    <script type="text/javascript" src="./main.js" defer></script>
+</body>
+</html>
